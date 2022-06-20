@@ -22,15 +22,13 @@ public class Calculator {
             if (operands[i].equals("Add") || operands[i].equals("Sub")) {
                 result += productQuotientGroup;
                 productQuotientGroup=operands[i].equals("Add") ? numbers[i+1] : -numbers[i+1];
+
+
             }
-
-            // TODO: Change the if statements below to "else if".
-            //  Why? Because if you don't, they will be run even if it is not necessary (think about it, will they ever be true
-            // if the if statement above is true? Also, change the if format to look better.
-
             //Calculate the product or quotient, depending on the operand
-            if (operands[i].equals("Mul")){productQuotientGroup *= numbers[i + 1];}
-            if (operands[i].equals("Div")){productQuotientGroup = productQuotientGroup / numbers[i + 1];            }
+            else if(operands[i].equals("Mul")){productQuotientGroup *= numbers[i + 1];}
+            else if(operands[i].equals("Div")){productQuotientGroup = productQuotientGroup / numbers[i + 1];}
+
         }
 
         //add the final "productQuotientGroup" into the result, and return the results.
